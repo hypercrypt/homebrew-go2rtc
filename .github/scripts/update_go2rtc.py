@@ -103,6 +103,14 @@ def write_formula(version, arm64_url, arm64_sha, amd64_url, amd64_sha):
             bin.install "go2rtc"
           end
 
+          service do
+            run [opt_bin/"go2rtc"]
+            keep_alive true
+            working_dir var/"go2rtc"
+            log_path var/"log/go2rtc.log"
+            error_log_path var/"log/go2rtc.log"
+          end
+
           test do
             system bin/"go2rtc", "-version"
           end
