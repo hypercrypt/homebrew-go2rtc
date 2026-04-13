@@ -20,7 +20,7 @@ class Go2rtc < Formula
   end
 
   service do
-    run [opt_bin/"go2rtc"]
+    run [opt_bin/"go2rtc", "-config", etc/"go2rtc.yaml"]
     keep_alive true
     working_dir var/"go2rtc"
     log_path var/"log/go2rtc.log"
