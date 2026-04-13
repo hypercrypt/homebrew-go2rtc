@@ -17,6 +17,7 @@ class Go2rtc < Formula
 
   def install
     bin.install "go2rtc"
+    (var/"go2rtc").mkpath
   end
 
   service do

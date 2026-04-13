@@ -101,6 +101,7 @@ def write_formula(version, arm64_url, arm64_sha, amd64_url, amd64_sha):
 
           def install
             bin.install "go2rtc"
+            (var/"go2rtc").mkpath
           end
 
           service do
